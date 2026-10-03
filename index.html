@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" data-season="fall">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive, noimageindex, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>For Olivia</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='7' width='28' height='19' rx='3' fill='%23f6eedd' stroke='%237a5a3a' stroke-width='1.5'/%3E%3Cpath d='M3 9l13 10L29 9' fill='none' stroke='%237a5a3a' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='18' r='4' fill='%23b4531a'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/fraunces-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=89e0f111be">
+</head>
+<body>
+
+  <!-- Password page -->
+  <div id="gate" class="gate" hidden>
+    <div class="scene" aria-hidden="true"><div class="drift"></div><div class="mountains"></div></div>
+    <form id="gate-form" class="gate-card" autocomplete="off">
+      <span class="tape" aria-hidden="true"></span>
+      <p class="gate-for">for</p>
+      <h1>Olivia</h1>
+      <div class="seal" aria-hidden="true">♥</div>
+      <label for="pw">Our secret word</label>
+      <input id="pw" type="password" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="current-password" required>
+      <label class="remember"><input id="remember" type="checkbox" checked> Remember me on this device</label>
+      <button type="submit">Open</button>
+      <p id="gate-msg" class="gate-msg" role="alert"></p>
+    </form>
+  </div>
+
+  <!-- Scrapbook -->
+  <div id="app" hidden>
+    <header class="hero">
+      <div class="scene" aria-hidden="true"><div class="drift"></div><div class="mountains"></div></div>
+      <div class="hero-inner">
+        <div class="hero-title">
+          <p class="hero-kicker">a letter every Sunday</p>
+          <h1>For <span id="her"></span></h1>
+          <p class="hero-from">love, <span id="me"></span></p>
+        </div>
+        <div class="next" id="next">
+          <div class="envelope" id="envelope" aria-hidden="true">
+            <div class="env-back"></div>
+            <div class="env-letter"><span>♥</span></div>
+            <div class="env-front"></div>
+            <div class="env-flap"></div>
+            <div class="env-seal">♥</div>
+          </div>
+          <div class="next-tag">
+            <span class="next-label" id="next-label">Next letter in</span>
+            <span class="clock" id="countdown" role="timer" aria-live="off">
+              <span class="unit"><b data-u="d">0</b><small>days</small></span>
+              <span class="unit"><b data-u="h">00</b><small>hrs</small></span>
+              <span class="unit"><b data-u="m">00</b><small>min</small></span>
+              <span class="unit"><b data-u="s">00</b><small>sec</small></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="toolbar" id="toolbar" aria-label="Sort and filter the scrapbook" hidden>
+      <select class="jump" id="jump" aria-label="Jump to a month"></select>
+      <button class="sort" id="sort" type="button"></button>
+    </nav>
+    <main id="book"></main>
+    <footer class="foot">
+      <button id="lock" type="button">lock this device</button>
+    </footer>
+  </div>
+
+  <!-- One letter -->
+  <article id="letter" hidden></article>
+
+  <!-- Photo viewer -->
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo">
+    <img id="lb-img" alt="">
+    <button class="lb-btn lb-close" id="lb-close" type="button" aria-label="Close">×</button>
+    <button class="lb-btn lb-prev" id="lb-prev" type="button" aria-label="Previous photo">‹</button>
+    <button class="lb-btn lb-next" id="lb-next" type="button" aria-label="Next photo">›</button>
+    <p class="lb-count" id="lb-count"></p>
+  </div>
+
+  <div id="preview-badge" class="preview-badge" hidden></div>
+
+  <script>window.SITE = { salt: '61672b8005f71b750d0cdee3505e089e', iterations: 600000 };</script>
+  <script src="app.js?v=89e0f111be"></script>
+</body>
+</html>
